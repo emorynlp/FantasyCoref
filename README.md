@@ -21,12 +21,23 @@ We carefully conduct annotation tasks in four stages to ensure the quality of ou
             * Among the stories in *The Arabian Nights*, *The Story of Aladdin*, *The Story of Ali Baba and the Forty Thieves* are annoated for the corpus. 
         * [Alice's Adventures in Wonderland by Lewis Carroll](https://www.gutenberg.org/ebooks/11)
 2. data structure
-    |dir name|structure|explanation|
-    |------|---|---|
-    |GFT_split1|dev, test, train||
-    |GFT_split2|dev, test, train||
-    |AFT_split3|test||
-    |AFT_original|test||
+    * **spliting train, dev, test set**
+        * Development and test set are chosen from 211 stories (10 stories each) in GFT using stratified sampling method so that the train/dev/test set could have homogeneous distributions in terms of number of sentences, tokens, entities, mentions, and number of fantasy-specific issues(**Assymetry of Knowledge**, **Changes in Entities**, **Foretelling or Wishes**, **Lexical Variations**).
+        * The rest of the stories (171 stories) are used as a train set to train our model.
+        * Note that all stories in AFT are only used as a separate test set to evaluate the generalization ability of our model on additional fictional texts.
+    * **partitioning documents**
+        * In the case of the dev/test set, additional partitioned version is constructed to reduce the number of tokens to be similar to that of the OntoNotes dataset (467 tokens).
+        * The partitioning process was done towards preserving the original entity chain.
+Each story is partitioned by finding the case where the sum of the number of entities in each partition is minimum so that the original entity chains are not cut in the middle and thereby produce extra number of unique entities in each partition.
+In addition, the stories were not partitioned in the middle of pair quotation marks to avoid starting or ending the partition in the middle of one's utterance.
+<br>
+
+|dir name|structure|explanation|
+|------|---|---|
+|GFT_split1|dev, test, train||
+|GFT_split2|dev, test, train||
+|AFT_split3|test||
+|AFT_original|test||
     
 3. data format
 
@@ -34,5 +45,7 @@ We carefully conduct annotation tasks in four stages to ensure the quality of ou
     
     
 # Statistics
+1. overall statistics
+2. statistics of splited dataset
 
 # Citation
