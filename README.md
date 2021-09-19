@@ -101,7 +101,7 @@ In addition, the stories were not partitioned in the middle of pair quotation ma
 ~~~
 @article{#,
 	author={Sooyoun Han, Sumin Seo, Minji Kang, Jongin Kim, Nayoung Choi, Min Song and Jinho D. Choi},
-	title={{FantasyCoref}: Coreference Resolution on Fantasy LiteratureThrough Omniscient Writer’s Point of View},
+	title={{FantasyCoref}: Coreference Resolution on Fantasy Literature Through Omniscient Writer’s Point of View},
 <!-- 	journal={},
 	year={},
 	month={},
