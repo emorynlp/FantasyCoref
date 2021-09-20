@@ -35,7 +35,7 @@ In addition, the stories were not partitioned in the middle of pair quotation ma
 
 |dir name|structure|explanation|
 |------|---|---|
-|GFT_split1|dev, test, train|the original version of the GFT dev/test set|
+|GFT_split1|dev, test, train|the original version of the GFT train/dev/test set|
 |GFT_split2|dev, test|the partitioned version of the GFT dev/test set|
 |AFT_split3|test|the partitioned version of the AFT test set|
 |AFT_original|-|We do not evaluate our model on the original version of AFT because we encounter a memory issue due to their large number of tokens, averaging to 9199.|
